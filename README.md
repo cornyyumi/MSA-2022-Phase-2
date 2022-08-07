@@ -1,6 +1,6 @@
 # MSA-2022-Phase-2
 
-## Phase 2 Requirements - Backend
+## Phase 2 - Backend
 
 ### Weatherman Web API
 This API will call the OpenWeatherAPI to get a response of the current weather at a City.\
@@ -17,9 +17,16 @@ The `WeathermanController.cs` implements the endpoints with the 4 CRUD operation
 
    If the Weather information does not exist on the database, the Weatherman API will all the OpenWeatherAPI to find the data, and add it to the database.
    
-- `Delete`: Delete the existing Weather information from database .
+- `Delete`: Delete the existing Weather information from database by entering a city name.
 
-* Create at least two configuration files, and demonstrate the differences between starting the project with one file over another.
+There are two configuration files for 'Production' and 'Development' environments.
+Having mutiple confiuration files are useful as it can easily configure the settings of our environment.
+
+When the application is ran in the `Production` environment, it will use the sqlite database 'WeatherDatabase.sqlite' to get, add, update, delete the data.
+
+When the application is ran in the `Development` environment, it will use the in-memory database to to get, add, update, delete the data.\
+This is espcially useful for the development stage as it has a faster access speed than a real database, and data stored in in-memory database will be reset each time the the application is started.
+
 
 ### Section Two
 
