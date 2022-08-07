@@ -7,7 +7,7 @@ This API will call the OpenWeatherAPI to get a response of the current weather a
 It will also deserailize the Json response given by the OpenWeatherAPI and  it to save it to "WeatherDatabase.sqlite".\
 The user can also call the API to process the weather data and be given a warning, if that are any concerns for the weather.
 
-The API implements 4 CRUD operations in the `WeathermanController.cs`(GET, POST, PUT, DELETE)
+The `WeathermanController.cs` implements the endpoints with the 4 CRUD operations for the API(GET, POST, PUT, DELETE)
 
 - `GET`: Get the Json response of Weather information by entering a city name, from the database.
 
